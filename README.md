@@ -16,6 +16,10 @@
 - run `yarn dev` to start server
 - visit `http://localhost:5173/` to view running application on default port
 
+## Testing
+
+- run `yarn test:unit` to execute unit tests
+
 ## Requirements 👇
 
 - [What we are looking for](#what-we-are-looking-for)
