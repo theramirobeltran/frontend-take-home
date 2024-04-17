@@ -1,18 +1,27 @@
-import { useState } from "react";
+import { FC } from "react";
 import { FaSearchengin } from "react-icons/fa";
 import { Button, Input, Stack } from "@chakra-ui/react";
 
-export const SearchForm = () => {
-  const [searchTerm, setSearchTerm] = useState("");
-  const isLoading = false;
+interface SearchFormProps {
+  isLoading?: boolean;
+  onChange: (searchTerm: string) => void;
+  onSubmit: () => void;
+  searchTerm: string;
+}
 
+export const SearchForm: FC<SearchFormProps> = ({
+  isLoading,
+  onChange,
+  onSubmit,
+  searchTerm,
+}) => {
   const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
-    setSearchTerm(e.target.value);
+    onChange(e.target.value);
   };
 
   const handleSubmit = (e: React.FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log(searchTerm);
+    onSubmit();
   };
 
   return (

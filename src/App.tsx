@@ -1,12 +1,12 @@
-import { Box, Text } from "@chakra-ui/react";
-import { SearchForm } from "./components";
+import { Text, VStack } from "@chakra-ui/react";
+import { SimpleSearch } from "./components";
 
 function App() {
   return (
-    <Box>
+    <VStack maxW={800} spacing={4} my={4}>
       <Text fontSize="x-large">Package search tool</Text>
-      <SearchForm />
-    </Box>
+      <SimpleSearch />
+    </VStack>
   );
 }
 
