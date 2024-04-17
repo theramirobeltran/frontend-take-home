@@ -8,3 +8,5 @@ export type PackageT = {
     };
   };
 };
+
+export type SettingsName = "failNetworkRequests";
