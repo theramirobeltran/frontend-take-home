@@ -1,5 +1,11 @@
+import { Box, Text } from "@chakra-ui/react";
+
 function App() {
-  return <h1>Package search tool</h1>;
+  return (
+    <Box>
+      <Text fontSize="x-large">Package search tool</Text>
+    </Box>
+  );
 }
 
 export default App;
