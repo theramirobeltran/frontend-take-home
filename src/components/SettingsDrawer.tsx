@@ -12,21 +12,22 @@ import {
 } from "@chakra-ui/react";
 import { ColorModeToggle } from ".";
 import { SettingsName } from "../types";
+import { useAppContext } from "../hooks";
 
 interface SettingsDrawerProps {
   isOpen: boolean;
   onClose: () => void;
-  onChange: (setting: SettingsName, value: boolean) => void;
 }
 
 export const SettingsDrawer: FC<SettingsDrawerProps> = ({
   isOpen,
   onClose,
-  onChange,
 }) => {
+  const { updateSetting } = useAppContext();
+
   const changeHandler =
     (key: SettingsName) => (e: React.ChangeEvent<HTMLInputElement>) => {
-      onChange(key, e.currentTarget.checked);
+      updateSetting(key, e.currentTarget.checked);
     };
 
   return (

@@ -10,3 +10,7 @@ export type PackageT = {
 };
 
 export type SettingsName = "failNetworkRequests";
+
+export type SettingsT = {
+  failNetworkRequests: boolean;
+};
