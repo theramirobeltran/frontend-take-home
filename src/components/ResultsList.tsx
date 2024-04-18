@@ -18,6 +18,7 @@ export const ResultsList: FC<ResultsListProps> = ({ results }) => (
   <VStack spacing={4}>
     {results.map((pkg) => (
       <Link
+        data-testid="package-link"
         key={pkg.package.name}
         href={pkg.package.links.npm}
         isExternal

@@ -7,4 +7,10 @@ describe("happy path", () => {
       cy.get("button").should("exist");
     });
   });
+
+  it("loads results", () => {
+    cy.visit("/");
+    cy.searchForPackage("react");
+    cy.get("[data-testid=package-link]").should("have.length.gt", 0);
+  });
 });

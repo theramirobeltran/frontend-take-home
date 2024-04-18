@@ -15,7 +15,7 @@ function App() {
       {settings.viewPaginated ? <PaginatedSearch /> : <SimpleSearch />}
 
       {/* Trigger and views for settings 👇 */}
-      <Box pos="fixed" right={2}>
+      <Box pos="fixed" right={2} data-testid="settings-trigger">
         <IconButton
           aria-label={"toggle-settings"}
           icon={<MdOutlineSettingsSuggest />}

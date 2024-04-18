@@ -8,7 +8,7 @@
 - Chakra-ui for design library
 - React Query for managing/caching api requests
 - Jest and React Testing Library for unit tests
-- Cypress for e2e testing (hopefully)
+- Cypress for e2e testing
 
 ## Setup
 
@@ -19,6 +19,7 @@
 ## Testing
 
 - run `yarn test:unit` to execute unit tests
+- run `yarn test:e2e` to execute e2e tests
 
 ## Requirements 👇
 
