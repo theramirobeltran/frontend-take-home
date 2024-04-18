@@ -11,6 +11,7 @@ export const AppContext = createContext<AppContextType | undefined>(undefined);
 export const AppContextProvider: FC<PropsWithChildren> = ({ children }) => {
   const [settings, setSettings] = useState<SettingsT>({
     failNetworkRequests: false,
+    viewPaginated: false,
   });
 
   const updateSetting = (setting: SettingsName, value: boolean) => {

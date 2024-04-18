@@ -1,2 +1,3 @@
 export { useAppContext } from "./useAppContext";
-export { usePackageSearch } from "./useSearch";
+export { usePaginatedSearch } from "./usePaginatedSearch";
+export { useSimpleSearch } from "./useSimpleSearch";

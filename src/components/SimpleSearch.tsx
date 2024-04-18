@@ -2,22 +2,24 @@ import { useState } from "react";
 import { Text, VStack } from "@chakra-ui/react";
 import { DNA } from "react-loader-spinner";
 import { ResultsList, SearchForm } from ".";
-import { usePackageSearch } from "../hooks";
+import { useSimpleSearch } from "../hooks";
 
 export const SimpleSearch = () => {
   const [searchTerm, setSearchTerm] = useState("");
-  const { data, isLoading, isError, refetch } = usePackageSearch(searchTerm);
+  const { data, isLoading, isError, refetch } = useSimpleSearch(searchTerm);
 
   const handleSearchChange = (searchTerm: string) => {
     setSearchTerm(searchTerm);
   };
 
+  const submit = searchTerm.length ? refetch : () => {};
+
   return (
-    <VStack spacing={4}>
+    <VStack spacing={8}>
       <SearchForm
         isLoading={isLoading}
         onChange={handleSearchChange}
-        onSubmit={refetch}
+        onSubmit={submit}
         searchTerm={searchTerm}
       />
       {isError && <Text>Whoah, something went wrong. Please try again.</Text>}

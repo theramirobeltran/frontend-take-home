@@ -1,3 +1,9 @@
+export type NpmResponseT = {
+  results: PackageT[];
+  time: string;
+  total: number;
+};
+
 export type PackageT = {
   package: {
     name: string;
@@ -9,8 +15,9 @@ export type PackageT = {
   };
 };
 
-export type SettingsName = "failNetworkRequests";
+export type SettingsName = "failNetworkRequests" | "viewPaginated";
 
 export type SettingsT = {
   failNetworkRequests: boolean;
+  viewPaginated: boolean;
 };

@@ -36,6 +36,8 @@ describe("SearchResults", () => {
     expect(screen.getAllByRole("link")).toHaveLength(mockResults.length);
     mockResults.forEach((pkg) => {
       expect(screen.getByText(pkg.package.name)).toBeInTheDocument();
+      expect(screen.getByText(pkg.package.version)).toBeInTheDocument();
+      expect(screen.getByText(pkg.package.description)).toBeInTheDocument();
     });
   });
 });

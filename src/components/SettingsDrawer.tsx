@@ -23,7 +23,7 @@ export const SettingsDrawer: FC<SettingsDrawerProps> = ({
   isOpen,
   onClose,
 }) => {
-  const { updateSetting } = useAppContext();
+  const { settings, updateSetting } = useAppContext();
 
   const changeHandler =
     (key: SettingsName) => (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -39,8 +39,19 @@ export const SettingsDrawer: FC<SettingsDrawerProps> = ({
 
         <DrawerBody alignContent="flex-start">
           <ColorModeToggle />
-          <Switch onChange={changeHandler("failNetworkRequests")} my={4}>
+          <Switch
+            isChecked={settings.failNetworkRequests}
+            onChange={changeHandler("failNetworkRequests")}
+            my={4}
+          >
             Fail Network Requests
+          </Switch>
+          <Switch
+            isChecked={settings.viewPaginated}
+            onChange={changeHandler("viewPaginated")}
+            mt={4}
+          >
+            View Paginated Example
           </Switch>
         </DrawerBody>
 

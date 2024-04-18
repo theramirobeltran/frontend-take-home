@@ -3,7 +3,7 @@ import { useAppContext } from ".";
 import { PackageT } from "../types";
 import { BASE_API_URL } from "../constants";
 
-export const usePackageSearch = (queryString: string) => {
+export const useSimpleSearch = (queryString: string) => {
   const { settings } = useAppContext();
   const url = `${BASE_API_URL}/suggestions?q=${queryString}`;
 
