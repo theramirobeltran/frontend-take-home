@@ -1,3 +1,7 @@
+Cypress.on("uncaught:exception", () => {
+  return false;
+});
+
 describe("error scenario", () => {
   it("displays error boundary", () => {
     cy.visit("/");
