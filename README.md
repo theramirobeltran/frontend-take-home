@@ -21,6 +21,11 @@
 - run `yarn test:unit` to execute unit tests
 - run `yarn test:e2e` to execute e2e tests
 
+## Environments
+
+- Locally via dev server at http://localhost:3000
+- QA at https://package-search-tool--qa-7bch035r.web.app/
+
 ## Requirements 👇
 
 - [What we are looking for](#what-we-are-looking-for)
