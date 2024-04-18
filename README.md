@@ -14,7 +14,7 @@
 
 - run `yarn` to install dependencies
 - run `yarn dev` to start server
-- visit `http://localhost:5173/` to view running application on default port
+- visit `http://localhost:3000/` to view running application on default port
 
 ## Testing
 
