@@ -1,0 +1,18 @@
+name: Deploy to QA channel
+on:
+  push:
+    branches:
+      - "*"
+jobs:
+  build_and_deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v3
+      - run: yarn && yarn build
+      - uses: FirebaseExtended/action-hosting-deploy@v0
+        with:
+          repoToken: "${{ secrets.GITHUB_TOKEN }}"
+          firebaseServiceAccount: "${{ secrets.FIREBASE_SERVICE_ACCOUNT_PACKAGE_SEARCH_TOOL }}"
+          projectId: package-search-tool
+          channelId: qa
+          expires: 10d
