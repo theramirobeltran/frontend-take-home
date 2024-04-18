@@ -25,7 +25,7 @@ export const SearchForm: FC<SearchFormProps> = ({
   };
 
   return (
-    <form onSubmit={handleSubmit}>
+    <form onSubmit={handleSubmit} data-testid="package-search-form">
       <Stack
         direction={["column", "row"]}
         w={"100%"}
